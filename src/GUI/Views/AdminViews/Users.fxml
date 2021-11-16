@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Views.AdminViews.Users">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="257.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="471.0" minHeight="10.0" prefHeight="468.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #888888;">
+            <children>
+                <Text fx:id="profileView" fill="WHITE" layoutX="430.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile" textAlignment="CENTER" wrappingWidth="90.0">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Text>
+                <Text fx:id="usersView" fill="#0a64e1" layoutX="340.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" textAlignment="CENTER" wrappingWidth="90.0">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Text>
+                <Text fx:id="booksView" fill="WHITE" layoutX="250.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books" textAlignment="CENTER" wrappingWidth="90.0">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Text>
+            </children>
+        </AnchorPane>
+        <Button fx:id="logOut" mnemonicParsing="false" text="Log Out">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </Button>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <children>
+                <TextField fx:id="searchByName" layoutX="228.0" layoutY="14.0" prefHeight="31.0" prefWidth="315.0" promptText="Search by Name" />
+            <TableView fx:id="booksTable" layoutX="-1.0" layoutY="52.0" prefHeight="345.0" prefWidth="770.0">
+              <columns>
+                <TableColumn fx:id="Name" prefWidth="140.0" text="Name" />
+                <TableColumn fx:id="Email" prefWidth="177.0" text="Email" />
+                  <TableColumn fx:id="PhoneNumber" prefWidth="166.0" text="Phone Number" />
+                  <TableColumn fx:id="Type" prefWidth="163.0" text="Type" />
+                  <TableColumn fx:id="Active" prefWidth="123.0" text="Active" />
+              </columns>
+            </TableView>
+                <Button fx:id="searchByNameBtn" layoutX="555.0" layoutY="17.0" mnemonicParsing="false" text="Search" />
+                <Button fx:id="disableBtn" layoutX="228.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="118.0" text="Disable User">
+                    <font>
+                        <Font name="SansSerif Regular" size="15.0" />
+                    </font>
+                </Button>
+            <Button fx:id="activateUser" layoutX="425.0" layoutY="413.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="118.0" text="Activate User">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

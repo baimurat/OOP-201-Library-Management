@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Views.Authentication.Login">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="451.0" minHeight="10.0" prefHeight="374.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="144.0" layoutX="78.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../static/uni_logo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="200.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System" wrappingWidth="555.9140625">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="381.0" prefWidth="770.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="loginBtn" layoutX="326.0" layoutY="248.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="120.0" text="Login">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="signUpBtn" layoutX="325.0" layoutY="330.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Signup">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="378.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="emailField" layoutX="248.0" layoutY="80.0" prefHeight="33.0" prefWidth="275.0" promptText="Email" />
+            <PasswordField fx:id="passwordField" layoutX="249.0" layoutY="154.0" prefHeight="33.0" prefWidth="275.0" promptText="Password" />
+            <Text fx:id="errorText" layoutX="249.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="275.0000065565109">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
